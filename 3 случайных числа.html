@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>3 Случайных числа</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: white;
+        }
+
+        h1 {
+            color: red;
+        }
+
+        p {
+            font-size: 2em;
+            color: black;
+        }
+    </style>
+</head>
+<body>
+
+<h1>Три случайных числа:</h1>
+<p id="result">Нажмите F5 для обновления страницы!</p>
+
+<script>
+const resultElement = document.getElementById('result');
+let randomNumbers = Array.from({length: 101}, (_, idx) => idx);
+randomNumbers.sort(() => Math.random() - 0.5);
+const threeRandoms = randomNumbers.slice(0, 3);
+
+resultElement.textContent = `${threeRandoms.join(', ')}`;
+</script>
+
+</body>
+</html>
