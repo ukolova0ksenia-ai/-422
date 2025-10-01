@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    body {
+        font-family: Arial, sans-serif;
+        background-color: #a0c8d3;
+        margin: 20px;
+    }
+
+    form {
+        margin-bottom: 10px;
+    }
+
+    label {
+        font-weight: bold;
+        margin-bottom: 10px;
+        display: inline-block;
+        font-style: italic;
+    }
+
+    input[type="text"] {
+        padding: 10px;
+        width: calc(25% - 25px);
+        margin-bottom: 10px;
+        border: 1px solid rgb(63, 36, 181);
+        border-radius: 5px;
+    }
+
+    button {
+        padding: 10px 15px;
+        background-color: rgb(253, 1, 1);
+        color: white;
+        border: none;
+        border-radius: 10px;
+        transition: background-color 0.3s;
+    }
+    
+    p {
+        font-size: 1.2em;
+        font-weight: bold;
+        font-style: italic;
+    }
+
+    ul {
+        list-style-type: none;
+        padding-left: 0;
+    }
+
+    li {
+        background-color: #cae4e8;
+        padding: 10px;
+        margin-bottom: 10px;
+        border-radius: 10px;
+        display: flex;
+        justify-content: space-between; 
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    }
+
+    input[type="checkbox"] {
+        transform: scale(1.2);
+        accent-color: rgb(144, 155, 165);
+    }
+</style>
+<body>
+    
+    
+    <form> 
+        <label for="name">Название пиццы</label> <br/>
+        <input 
+        type="text" 
+        placeholder="Название пиццы" 
+        id="name"> <br/>
+
+        <button id="add" onclick="add()" type="button">Добавить</button>
+    </form>
+    
+    <div>
+        <p> Заказы</p>
+        <ul>
+            <li>Три сезона <input type="checkbox"></li>
+            <li>Четыре сыра <input type="checkbox"></li>
+            <li>Пепперони <input type="checkbox"></li>
+            <li>Гавайская <input type="checkbox"></li>
+        </ul>
+    </div>
+
+    <script>
+        //console.log('hello')
+
+        let nameInput = document.getElementById('name');
+
+        function add() {
+            console.log(nameInput.value)
+        }
+    </script>
+
+</body>
+</html>
